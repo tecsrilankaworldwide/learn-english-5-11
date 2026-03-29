@@ -1,0 +1,89 @@
+{
+  "theme": "light",
+  "archetype": "1_organic_and_earthy",
+  "typography": {
+    "heading_font": "Outfit",
+    "body_font": "DM Sans",
+    "strategies": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tight font-black text-[#1A1D1A]",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight font-bold text-[#1A1D1A]",
+      "h3": "text-xl sm:text-2xl font-medium text-[#1A1D1A]",
+      "body": "text-base leading-relaxed font-normal text-[#2C352D]",
+      "labels": "text-xs tracking-[0.2em] uppercase font-semibold text-[#6D756F]"
+    }
+  },
+  "colors": {
+    "background": "#FAFAF8",
+    "surface": "#FFFFFF",
+    "primary": "#E07A5F",
+    "primary_foreground": "#FFFFFF",
+    "secondary": "#81B29A",
+    "secondary_foreground": "#FFFFFF",
+    "accent": "#7EBDC2",
+    "muted": "#F4F1EA",
+    "muted_foreground": "#6D756F",
+    "text": "#1A1D1A",
+    "border": "#E5E1D8"
+  },
+  "layout_and_spacing": {
+    "philosophy": "Generous Spacing Philosophy",
+    "container_padding": "p-6 md:p-8 lg:p-12",
+    "gap_strategy": "gap-6 md:gap-8",
+    "radius": "rounded-3xl",
+    "grid": "Bento Grid Protocol for categories (grid-cols-2 md:grid-cols-4 gap-4)"
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#E07A5F] text-white hover:bg-[#D0694E] shadow-sm rounded-full px-6 py-3 font-medium transition-colors",
+      "icon": "rounded-full p-3 hover:bg-[#F4F1EA] text-[#1A1D1A] transition-colors flex items-center justify-center",
+      "audio_play": "rounded-full p-2 bg-[#F4F1EA] hover:bg-[#E5E1D8] text-[#1A1D1A] transition-colors flex items-center justify-center gap-2 text-sm font-medium"
+    },
+    "cards": {
+      "phrase_card": "bg-white border border-[#E5E1D8] rounded-3xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#E07A5F]/30 hover:shadow-lg flex flex-col gap-4",
+      "category_card": "bg-white border border-[#E5E1D8] rounded-2xl p-4 transition-all hover:bg-[#F4F1EA] cursor-pointer flex flex-col items-center justify-center gap-2 text-center h-full"
+    },
+    "inputs": {
+      "search": "bg-[#F4F1EA] border-none rounded-2xl p-4 focus:ring-2 focus:ring-[#E07A5F]/50 text-base w-full placeholder:text-[#6D756F]"
+    },
+    "selectors": {
+      "language_dropdown": "bg-white border border-[#E5E1D8] rounded-2xl shadow-sm hover:border-[#E07A5F] focus:ring-[#E07A5F]"
+    }
+  },
+  "motion": {
+    "hover": "transition-all duration-200 ease-in-out",
+    "entrance": "staggered fade-up for list items using Framer Motion"
+  },
+  "media": {
+    "images": {
+      "hero_illustration": {
+        "url": "https://static.prod-images.emergentagent.com/jobs/d830c768-d7c1-463b-8e61-1ac42dde8b9d/images/71626a3419a843ebaded07329ab95d8c7fe2c4d73be8b1d6a5791c5a2c1d7ccb.png",
+        "description": "Minimalist flat illustration of a travel passport and plane ticket, warm earthy color palette, soft lighting."
+      },
+      "organic_background": {
+        "url": "https://static.prod-images.emergentagent.com/jobs/d830c768-d7c1-463b-8e61-1ac42dde8b9d/images/6372fb103d9ecc2f3318e1a589964bbc600eae6ec82dc2d9342cef802f822e26.png",
+        "description": "Abstract soft geometric background with warm sand, stone grey, off-white, and terracotta tones."
+      },
+      "asian_landmark": {
+        "url": "https://images.unsplash.com/photo-1597424482786-0b1b7065dbac?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAxODF8MHwxfHNlYXJjaHwxfHxhc2lhbiUyMGxhbmRtYXJrc3xlbnwwfHx8fDE3NzQ3ODgyMDh8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Red and gold temple under cloudy sky during daytime."
+      }
+    }
+  },
+  "icons": {
+    "library": "@phosphor-icons/react",
+    "install_command": "yarn add @phosphor-icons/react",
+    "usage": "Use Phosphor icons with Duotone or Regular weight for a high-end, clean travel aesthetic."
+  },
+  "instructions_to_main_agent": [
+    "Build the Travel Phrase Companion as a responsive web app. Install Outfit and DM Sans fonts.",
+    "Use Phosphor icons (yarn add @phosphor-icons/react) for categories, audio buttons, and UI navigation.",
+    "The Hero section should be welcoming and visual. You can use the 'organic_background' image as an underlying subtle texture, and feature the 'hero_illustration' near the top or next to the main headline.",
+    "Create a 'Select Destination / Language' dropdown featuring the 14 specified languages: Japanese, Korean, Taiwanese, Thai, Vietnamese, Indonesian, Mandarin Chinese, Traditional Chinese, Cantonese, Tamil, Hindi, Sinhala, Urdu, Bengali.",
+    "Build a Category section using a Bento Grid or horizontally scrollable pill layout. Categories: Greetings, Shopping, Food/Dining, Directions/Navigation, Emergency, Social conversations, Transportation, Accommodation.",
+    "Include a Search input to quickly filter the currently displayed phrases.",
+    "Phrase Cards Design: Use the `phrase_card` style. The card must clearly show the English text and Native text. Include TWO distinct audio buttons: one for English, one for the Target Language. If possible, utilize the browser's native `window.speechSynthesis` API for actual audio playback. If not feasible for all languages, fallback to a mocked toast notification.",
+    "Color implementation: Heavily rely on the Organic & Earthy palette. Base background is #FAFAF8. Cards are #FFFFFF with #E5E1D8 borders. The primary action color is Terracotta #E07A5F. Avoid default tech blue.",
+    "Add `data-testid` to all interactive elements (dropdowns, category cards, play buttons, search input).",
+    "Ensure Header/Navbar uses a solid background (bg-[#FAFAF8]) or crystal glassmorphism if sticky, to prevent text collision when scrolling."
+  ]
+}
